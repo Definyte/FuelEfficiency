@@ -24,11 +24,13 @@ public class FuelEfficiency {
         //Fill Array
         for (int i = 0; i < 5; i++) {
             choice = JOptionPane.showInputDialog(
-                    "Vehicle #" + "\n"
+                    "Vehicle #\n"
                     + "1 Truck\n"
                     + "2 Car\n"
                     + "3 Hyrbrid Car\n"
                     + "4 Motorcycle");
+            String litres = JOptionPane.showInputDialog("How many L are you using?");
+            double litresUsed = Double.parseDouble(litres);
             if (choice.equals("1")) {
                 theArray[i] = new Truck();
             }
@@ -41,11 +43,9 @@ public class FuelEfficiency {
             if (choice.equals("4")) {
                 theArray[i] = new Motorcycle();
             }
+           System.out.println(theArray[i].getDistance(litresUsed));
         }
-        for (int i = 0; i < 5; i++) {
-            theArray[i].getDistance(i);
-            
-        }
+        
     }
 
 }
