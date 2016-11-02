@@ -5,6 +5,7 @@
  */
 package fuelefficiency;
 
+import java.text.DecimalFormat;
 import javax.swing.*;
 
 /**
@@ -29,6 +30,8 @@ public class FuelEfficiency {
                     + "2 Car\n"
                     + "3 Hyrbrid Car\n"
                     + "4 Motorcycle");
+            
+            
             String litres = JOptionPane.showInputDialog("How many L are you using?");
             double litresUsed = Double.parseDouble(litres);
             if (choice.equals("1")) {
@@ -43,9 +46,11 @@ public class FuelEfficiency {
             if (choice.equals("4")) {
                 theArray[i] = new Motorcycle();
             }
-           System.out.println(theArray[i].getDistance(litresUsed));
+            
+            JOptionPane.showMessageDialog(null, theArray[i].getDistance(litresUsed));
+            System.exit(0);
         }
-        
+
     }
 
 }
