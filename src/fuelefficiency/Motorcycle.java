@@ -5,18 +5,15 @@
  */
 package fuelefficiency;
 
-//import javax.swing.*;
-
 /**
  *
  * @author user
  */
 public class Motorcycle extends Vehicle {
-//    public Motorcycle(){
-//        name = JOptionPane.showInputDialog("What is the name of your vehicle?");
-//    }
-    public double getDistance(double litresUsed){
-        double distance = litresUsed * 15.87301587;
+
+    public double getDistance(double litresUsed) {
+        double d = litresUsed * 15.87301587;
+        int distance = (int) d;
         return distance;
     }
 }

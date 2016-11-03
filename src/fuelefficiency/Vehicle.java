@@ -5,21 +5,14 @@
  */
 package fuelefficiency;
 
-import javax.swing.*;
-
 /**
  *
  * @author user
  */
-public class Vehicle {
-    static String name;
+public abstract class Vehicle {
+    static String litres;
     public Vehicle(){
-        name = JOptionPane.showInputDialog("How many L are you using?");
-        
+        litres = "";
     }
-    public double getDistance(double litresUsed){
-        double distance = litresUsed * 100;
-        JOptionPane.showInputDialog(distance);
-        return distance;
-    }
+    abstract public double getDistance(double litresUsed);
 }

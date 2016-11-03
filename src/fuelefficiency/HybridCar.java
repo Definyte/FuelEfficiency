@@ -4,17 +4,15 @@
  * and open the template in the editor.
  */
 package fuelefficiency;
-//import javax.swing.*;
 /**
  *
  * @author user
  */
-public class HybridCar extends Vehicle{
-//    public HybridCar(){
-//        name = JOptionPane.showInputDialog("What is the name of your vehicle?");
-//    }
-    public double getDistance(double litresUsed){
-        double distance = litresUsed * 26.31578947;
+public class HybridCar extends Vehicle {
+
+    public double getDistance(double litresUsed) {
+        double d = litresUsed * 26.31578947;
+        int distance = (int) d;
         return distance;
     }
 }
