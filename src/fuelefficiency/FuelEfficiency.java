@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package fuelefficiency;
-
-import java.text.DecimalFormat;
 import javax.swing.*;
 
 /**
@@ -18,6 +16,7 @@ public class FuelEfficiency {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Array with the different types of vehicles
         Vehicle theArray[] = new Vehicle[5];
 
         String choice;
@@ -30,8 +29,7 @@ public class FuelEfficiency {
                     + "2 Car\n"
                     + "3 Hyrbrid Car\n"
                     + "4 Motorcycle");
-            
-            
+            //Ask for amount of L's
             String litres = JOptionPane.showInputDialog("How many L are you using?");
             double litresUsed = Double.parseDouble(litres);
             if (choice.equals("1")) {
@@ -46,8 +44,8 @@ public class FuelEfficiency {
             if (choice.equals("4")) {
                 theArray[i] = new Motorcycle();
             }
-            
-            JOptionPane.showMessageDialog(null, theArray[i].getDistance(litresUsed));
+            //Display distance and exit
+            JOptionPane.showMessageDialog(null, theArray[i].getDistance(litresUsed)+ " km's");
             System.exit(0);
         }
 
